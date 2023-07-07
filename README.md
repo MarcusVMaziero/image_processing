@@ -1,5 +1,6 @@
 # Projeto final Processamento de Imagens
 Projeto final da disciplina de processamento de imagens do PPGI da UTFPR-CP.
+Link com o Vídeo de apresentação: https://drive.google.com/file/d/1TdA0yE-_XlV-p2A4qWMi0YK8LD3jBL09/view?usp=sharing
 O projeto apresenta um código python com algumas interações que processam imagens de uma base de dados entre carros e motos e ao final do processamento exibe uma matriz de confusão e os dados relevantes como acurácia de acordo com os parametros escolhidos para a execução do programa.
 
 ## Equipe
