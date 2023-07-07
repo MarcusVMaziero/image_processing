@@ -49,32 +49,53 @@ Com classificador SVM
 
 SVM + MinMaxScaler:
 
+ <img src="https://github.com/MarcusVMaziero/image_processing/blob/main/accuracy/svm%2Bminmax-ac.png">
 
 SVM + StandardScaler:
 
+ <img src="https://github.com/MarcusVMaziero/image_processing/blob/main/accuracy/svm%2Bstand.png">
+
 SVM + MaxAbsScaler:
 
+ <img src="https://github.com/MarcusVMaziero/image_processing/blob/main/accuracy/svm%2Bmaxabs.png">
+
 SVM + RobustScaler:
+
+ <img src="https://github.com/MarcusVMaziero/image_processing/blob/main/accuracy/svm%2Breso.png">
 
 Com classificador KNN
 
 KNN + MinMaxScaler:
 
+ <img src="https://github.com/MarcusVMaziero/image_processing/blob/main/accuracy/knn%2Bminmax.png">
+
 KNN + StandardScaler:
+
+ <img src="https://github.com/MarcusVMaziero/image_processing/blob/main/accuracy/knn%2Bstand.png">
 
 KNN + MaxAbsScaler:
 
+ <img src="https://github.com/MarcusVMaziero/image_processing/blob/main/accuracy/knn%2Bmaxabs.png">
+
 KNN + RobustScaler:
+
+ <img src="https://github.com/MarcusVMaziero/image_processing/blob/main/accuracy/knn%2Breso.png">
 
 Resultado
 
 Os melhores resultados foram:
+
 Utilizando o classificador SVM e o normalizador StandardScaler a acaurácia foi de 0.79
+
 Utilizando o classificador KNN e o normalizador RobustScaler a acaurácia foi de 0.79
 
 Os piores resultados foram:
+
 Utilizando o classificador SVM e o normalizador MinMax a acaurácia foi de 0.50
+
 Utilizando o classificador SVM e o normalizador MaxAbs a acaurácia foi de 0.50
+
+Para visualizar a matriz de confusão acesse: https://github.com/MarcusVMaziero/image_processing/tree/main/accuracy/confu
 
 ## Instalação e Execução
 Incluir os passos necessários para instalação de bibliotecas/dependências
