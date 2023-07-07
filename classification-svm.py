@@ -39,7 +39,7 @@ def readData(path):
         for file in glob.glob(path+typeCar+'/' + pattern):
             images.append(getImages(file))
             labels.append(1)
-    print('[INFO] Quantidade de itens para treinamento:', len(images))
+    print('[INFO] Quantidade de itens:', len(images))
     return images, labels
 
 def getDescriptors(images):
