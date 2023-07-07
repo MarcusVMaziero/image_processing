@@ -165,6 +165,3 @@ if selectedClassifier == 2:
 
 clf, centers = training(scaler, classifier)
 test(clf, centers)
-
-    
-    
