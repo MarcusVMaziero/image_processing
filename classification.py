@@ -11,17 +11,17 @@ from progress.bar import Bar
 import warnings
 warnings.filterwarnings("ignore")
 
-trainPath = 'images/cats_dogs_light/train/'
-testPath = 'images/cats_dogs_light/test/'
+trainPath = 'dataset/training/'
+testPath = 'dataset/test/'
 
-def getData(path):
+def getData(path, nameImage):
     images = []
     labels = []
     if os.path.exists(path):
         fileList = os.listdir(path)
         for fileName in fileList:
-            label = os.path.basename(fileName).split('.')[0]
-            if (label == 'cat'):
+            label = os.path.basename(fileName).split('(')[0]
+            if (label == nameImage):
                 labels.append(0)
             else:
                 labels.append(1)
@@ -33,7 +33,8 @@ def getData(path):
     return images, labels
 
 print('[INFO] Getting train data...')
-trainImages, trainLabels = getData(trainPath)
+trainImages, trainLabels = getData(trainPath+'Bike', 'Bike')
+trainImages, trainLabels = getData(trainPath+'Car', 'Car')
 trainImages = np.array(trainImages)
 #print(f'Shape of images = {trainImages.shape}')
 
