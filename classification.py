@@ -69,7 +69,7 @@ def find_index(descriptor, center):
 
 def getHistogramList(descriptorList, centers):
     histogramList = []
-    print('[INFO] Extraindo SIFT descritor...')
+    print('[INFO] Historiograma...')
     for i in range(len(descriptorList)):
         histogram = np.zeros(len(centers))
         for d in range(len(descriptorList[i])):
@@ -77,7 +77,7 @@ def getHistogramList(descriptorList, centers):
             idx = find_index(descriptor,centers)
             histogram[idx] += 1
         histogramList.append(histogram)
-    print('[INFO] Finalizou a extração SIFT descritor...')
+    print('[INFO] Historiograma finalizado com sucesso...')
     return histogramList
 
 
@@ -90,12 +90,12 @@ def training(scaler, classifier):
     print('[INFO] Capturando os descritores para treinamento...')
     trainSiftDescriptors = getDescriptors(trainImages)
 
-    print('[INFO] Carregando a lista de descritores para treinamento...')
-    k = 10 
+    print('[INFO] Carregando a lista de agrupamento para treinamento...')
+    k = 100
     kmeans = KMeans(n_clusters = k, n_init='auto')
     kmeans.fit(np.vstack(trainSiftDescriptors))
     centers = kmeans.cluster_centers_ 
-    print('[INFO] Carregamento da lista de descritores realizada com sucesso!')
+    print('[INFO] Carregamento da lista de agrupamento realizado com sucesso!')
 
     print('[INFO] Capturando o historiograma para a base de treinamento...')
     trainData = getHistogramList(trainSiftDescriptors,centers)

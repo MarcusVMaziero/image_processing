@@ -9,6 +9,9 @@ Marcus Vinícius Santana Maziero - Aluno externo PPGI
 O dataset escolhido foi: Car vs Bike Classification Dataset.
 Um dos datasets recomentados pelo docente da disciplina.
 Link do dataset - https://www.kaggle.com/datasets/utkarshsaxenadn/car-vs-bike-classification-dataset
+O dataset possui no total 4.000 imagens, sendo 50% de Car e 50% de Bike.
+Para a execução do projeto foi divido em 2 pastas a training(80% da base) e test(20% da base). A divisão foi aleatória porém garantindo que em cada pasta estaria os elementos correspondentes.
+A decisão de realizar a divisão foi para facilitar o entendimento do discente no inicio do projeto.
 ## Descrição do projeto
 O projeto realiza a classificação binária dos dados de motos (Bike) e carros (Car) de acordo com o normalizador escolhido e o classificador.
 
@@ -42,11 +45,62 @@ Tratar os ocasionais erros e também melhor a qualidade do código como também 
 ## Repositório do projeto
 https://github.com/MarcusVMaziero/image_processing
 ## Classificador e acurácia
+Com classificador SVM
+
 SVM + MinMaxScaler:
+
+
+SVM + StandardScaler:
+
+SVM + MaxAbsScaler:
+
+SVM + RobustScaler:
+
+Com classificador KNN
+
+KNN + MinMaxScaler:
+
+KNN + StandardScaler:
+
+KNN + MaxAbsScaler:
+
+KNN + RobustScaler:
+
+Resultado
+
+Os melhores resultados foram:
+Utilizando o classificador SVM e o normalizador StandardScaler a acaurácia foi de 0.79
+Utilizando o classificador KNN e o normalizador RobustScaler a acaurácia foi de 0.79
+
+Os piores resultados foram:
+Utilizando o classificador SVM e o normalizador MinMax a acaurácia foi de 0.50
+Utilizando o classificador SVM e o normalizador MaxAbs a acaurácia foi de 0.50
 
 ## Instalação e Execução
 Incluir os passos necessários para instalação de bibliotecas/dependências
 necessárias para instalação e execução do projeto, bem como a estrutura de
 pastas utilizadas para organização dos arquivos (código e dataset)
+Clonar o projeto do repo: https://github.com/MarcusVMaziero/image_processing
+* Para executar o projeto é necessário possuir o Python em sua máquina sendo a versão minima 3.8.10
+* O projeto pode ser aberto em qualquer editor de texto ou IDE - ex: VSCode / PyCharm...
+* Após é necessário importar os pacotes externos que são utilizados, para isso utilize o pip ou outro gerenciador.
+* Com isso basta executar o projeto (arquivo: classification.py) selecionar as opções de normalizador e classificador.
+
+Estrutura do projeto:
+
+    -classification.py
+    -dataset
+        -test
+            -Bike
+            -Car
+        -training
+            -Bike
+            -Car
+
+Vale lembrar que o dataset já esta divido com a regra 80/20, sendo 80% para treinamento e 20% para teste
+
+ATENÇÃO - NÃO ALTERE NENHUMA ORDEM OU COMPOSIÇÃO DA PASTA dataset (POIS IRÁ OCASIONAR UM PROBLEMA E/OU RESULTADOS INCORRETOS)
+
+É legal executar mais de uma vez e analisar as diferenças entre os normalizadores e classificadores e como isso afeta a acurácia.
 ## Instruções de uso (opcional)
-Incluir informações adicionais sobre o uso/execução do projeto
+O código desse projeto pode servir para outras comparações binárias de outros datasets, basta realizar algumas alterações.
